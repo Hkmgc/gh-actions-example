@@ -2,14 +2,16 @@ name: Build java application
 
 on: [push]
 
-permissions:
-  contents: read
-  package: write
+
 
 jobs:
   build:
     name: Build & upload artifact
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      package: write
 
     steps:
       - uses: actions/checkout@v5
@@ -29,3 +31,5 @@ jobs:
       
       - name: Deploy artifact on github
         run: mvn deploy --file java-app/pom.xml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
