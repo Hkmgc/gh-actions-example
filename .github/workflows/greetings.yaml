@@ -1,4 +1,4 @@
-name: Greetings on 
+name: Greetings comment on issue creation
   
 on:
   issues:
@@ -6,7 +6,10 @@ on:
 
 jobs:
   greetings:
+    name: Add greeting message on issue
     runs-on: ubuntu-latest
+
     steps:
-      - name: greet message
-        run: echo Welcome !!! 🥳🚀🚀🚀
+      - uses: actions/first-interaction@v3
+        with:
+          issue_message: Welcome !!! 🥳🚀🚀🚀
