@@ -8,4 +8,5 @@ jobs:
   greetings:
     runs-on: ubuntu-latest
     steps:
-      - name: echo Welcome !!! 🥳🚀🚀🚀
+      - name: greet message
+        run: echo Welcome !!! 🥳🚀🚀🚀
