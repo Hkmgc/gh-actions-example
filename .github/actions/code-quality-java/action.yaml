@@ -13,7 +13,7 @@ runs:
   using: "composite"
   steps:
     - name: Run Checkstyle Analysis
-      run: mvn checkstyle:checkstyle --file ${{ inputs.working-directory }}/pom.xml
+      run: mvn checkstyle:checkstyle
       shell: bash
       working-directory: ${{ inputs.working-directory }}
     - name: Upload Checkstyle Report
