@@ -2,6 +2,10 @@ name: Build java application
 
 on: [push]
 
+permissions:
+  content: read
+  package: write
+
 jobs:
   build:
     name: Build & upload artifact
@@ -22,3 +26,6 @@ jobs:
         with:
           name: java-app-example
           path: java-app/target/*.jar
+      
+      - name: Deploy artifact on github
+        run: mvn deploy --file java-app/pom.xml
