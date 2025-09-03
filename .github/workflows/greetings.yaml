@@ -1,0 +1,11 @@
+name: Greetings on 
+  
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  greetings:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo Welcome !!! 🥳🚀🚀🚀
