@@ -18,7 +18,7 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
-      - uses: .github/actions/code-quality-java
+      - uses: ./.github/actions/code-quality-java
         with:
           working-directory: java-app
 
