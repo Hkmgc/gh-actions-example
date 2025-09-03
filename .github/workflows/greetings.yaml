@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/first-interaction@v3
+      - name: Greet message
+        uses: KeisukeYamashita/create-comment@v1
         with:
-          issue_message: Welcome !!! 🥳🚀🚀🚀
+          comment: Have you turned your computer on and off again ??
