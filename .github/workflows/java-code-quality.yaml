@@ -19,7 +19,7 @@ jobs:
           java-version: '21'
 
       - uses: .github/actions/code-quality-java
-        inputs:
+        with:
           working-directory: java-app
 
       - uses: actions/upload-artifact@v4
