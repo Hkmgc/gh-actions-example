@@ -3,7 +3,7 @@ name: Build java application
 on: [push]
 
 permissions:
-  content: read
+  contents: read
   package: write
 
 jobs:
