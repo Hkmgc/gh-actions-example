@@ -15,5 +15,9 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
       
-      - name: Build with Maven
-        run: mvn -B package --file java-app/pom.xml
+      - name: Build and test
+        run: mvn -B package test --file java-app/pom.xml
+      
+      - name: Build and test
+        run: mvn -B deploy --file java-app/pom.xml
+
